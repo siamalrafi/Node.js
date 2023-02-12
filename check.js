@@ -1,22 +1,7 @@
-/* var http = require("http");
-http.createServer(function (request, response) {
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
 
-    response.writeHead(200, { 'Content-Type': 'text/plain' });
-    response.end(' Hello World\n test request');
-
-}).listen(8081);
-
-
-console.log('Server running at http://127.0.0.1:8081/'); */
-
-
-var http = require("http");
-
-http
-
-
-
-
-
-
-
+eventEmitter.on('scream', function() {
+  console.log('A scream is detected!');
+});
+eventEmitter.emit('scream');
