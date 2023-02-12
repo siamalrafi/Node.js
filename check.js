@@ -1,7 +1,8 @@
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+const fs = require('fs');
 
-eventEmitter.on('scream', function() {
-  console.log('A scream is detected!');
+fs.readFile('fileName.txt',(err,data)=>{
+    console.log(data.toString());
 });
-eventEmitter.emit('scream');
+
+
+console.log('object');
